@@ -72,6 +72,24 @@
             aspect-ratio: 297/420;
         }
         
+        /* Phone layout: stack the panels in one column on narrow screens.
+           Screen only, so printing (from any device) still uses the A3 layout above. */
+        @media screen and (max-width: 819px) {
+            #root { padding-bottom: 5rem; }
+            #root .poster-container { aspect-ratio: auto; }
+            #root .poster-header { padding: 1.25rem; }
+            #root .poster-title { font-size: 2.75rem; }
+            #root .poster-subtitle { font-size: 0.875rem; }
+            #root .poster-body { flex-direction: column; }
+            #root .poster-sidebar,
+            #root .poster-main { width: 100%; padding: 1.25rem; }
+            #root .poster-steps { height: auto; padding-bottom: 1rem; }
+            #root .team-connector { display: none; }
+            #root .poster-grid { grid-template-columns: 1fr; gap: 1rem; }
+            #root .poster-grid h3 { font-size: 1.5rem; padding-right: 2.5rem; }
+            #root .print-button { bottom: 1rem; right: 1rem; padding: 0.75rem 1.25rem; }
+        }
+
         /* Custom dotted pattern for the "Connect" line */
         .dots-pattern {
             background-image: radial-gradient(#94a3b8 1px, transparent 1px);

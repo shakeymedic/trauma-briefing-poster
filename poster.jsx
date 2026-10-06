@@ -20,7 +20,7 @@ const StepUpItem = ({ letter, title, icon, isTeam, sub }) => (
         
         {/* Visual Connection Line for TEAM */}
         {isTeam && (
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2 flex items-center">
+            <div className="team-connector absolute -right-8 top-1/2 -translate-y-1/2 flex items-center">
                 <div className="w-8 h-2 bg-nhs-blue"></div>
                 <div className="w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-nhs-blue"></div>
             </div>
@@ -36,12 +36,12 @@ const Poster = () => {
             <div className="poster-container w-full bg-white text-dark-slate shadow-2xl overflow-hidden flex flex-col a3-ratio relative font-sans">
                 
                 {/* HEADER */}
-                <header className="bg-dark-slate text-white p-8 flex justify-between items-end border-b-8 border-nhs-blue shrink-0 z-30 relative">
+                <header className="poster-header bg-dark-slate text-white p-8 flex justify-between items-end border-b-8 border-nhs-blue shrink-0 z-30 relative">
                     <div>
-                        <h1 className="font-display text-7xl uppercase tracking-tighter leading-[0.9]">
+                        <h1 className="poster-title font-display text-7xl uppercase tracking-tighter leading-[0.9]">
                             Trauma <span className="text-nhs-blue">Brief</span>
                         </h1>
-                        <p className="text-xl font-bold text-slate-400 mt-2 tracking-wide uppercase">
+                        <p className="poster-subtitle text-xl font-bold text-slate-400 mt-2 tracking-wide uppercase">
                             Relational Coordination &bull; Zero Point Survey
                         </p>
                     </div>
@@ -51,15 +51,15 @@ const Poster = () => {
                     </div>
                 </header>
 
-                <div className="flex grow overflow-hidden">
+                <div className="poster-body flex grow overflow-hidden">
                     
                     {/* LEFT SIDEBAR: ZERO POINT SURVEY (22%) */}
-                    <div className="w-[24%] bg-dark-slate p-6 flex flex-col z-20 relative shadow-2xl">
+                    <div className="poster-sidebar w-[24%] bg-dark-slate p-6 flex flex-col z-20 relative shadow-2xl">
                         <h2 className="text-white font-display text-2xl uppercase mb-6 border-b border-slate-600 pb-4">
                             <span className="text-nhs-blue">Pre-Brief</span> Check
                         </h2>
                         
-                        <div className="flex flex-col justify-center h-full pb-12">
+                        <div className="poster-steps flex flex-col justify-center h-full pb-12">
                             <StepUpItem letter="S" title="Self" sub="Ready?" />
                             <StepUpItem letter="T" title="Team" sub="The Briefing" isTeam={true} />
                             <StepUpItem letter="E" title="Env" sub="Kit Check" />
@@ -85,7 +85,7 @@ const Poster = () => {
                     </div>
 
                     {/* MAIN CONTENT: 6 STEP PROTOCOL (78%) */}
-                    <div className="w-[76%] bg-slate-50 p-6 md:p-8 flex flex-col relative">
+                    <div className="poster-main w-[76%] bg-slate-50 p-6 md:p-8 flex flex-col relative">
                         
                         {/* Background Watermark */}
                         <div className="absolute top-0 right-0 opacity-[0.03] pointer-events-none">
@@ -93,7 +93,7 @@ const Poster = () => {
                         </div>
 
                         {/* Grid Layout */}
-                        <div className="grid grid-cols-2 gap-6 h-full">
+                        <div className="poster-grid grid grid-cols-2 gap-6 h-full">
 
                             {/* 1. INTRODUCTIONS */}
                             <div className="col-span-1 bg-white border-2 border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col relative overflow-hidden group">
@@ -203,7 +203,7 @@ const Poster = () => {
             {/* Controls */}
             <button 
                 onClick={handlePrint}
-                className="no-print fixed bottom-8 right-8 bg-dark-slate hover:bg-black text-white font-bold py-4 px-8 rounded-full shadow-2xl flex items-center gap-3 transition-all z-50 border-4 border-white hover:scale-105 group"
+                className="print-button no-print fixed bottom-8 right-8 bg-dark-slate hover:bg-black text-white font-bold py-4 px-8 rounded-full shadow-2xl flex items-center gap-3 transition-all z-50 border-4 border-white hover:scale-105 group"
             >
                 <Icon name="printer" className="w-6 h-6 group-hover:text-nhs-blue transition-colors" />
                 Print A3 Poster
