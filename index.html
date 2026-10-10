@@ -6,7 +6,6 @@
     <title>Trauma Team Brief Poster V3</title>
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
@@ -18,26 +17,6 @@
     <!-- Google Fonts: Inter (UI) & Archivo Black (Headlines) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=Archivo+Black&display=swap" rel="stylesheet">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Archivo Black', 'sans-serif'],
-                    },
-                    colors: {
-                        'nhs-blue': '#005EB8',
-                        'nhs-dark-blue': '#003087',
-                        'nhs-bright-blue': '#0072CE',
-                        'alert-red': '#DA291C',
-                        'safe-green': '#009639',
-                        'dark-slate': '#231f20',
-                    }
-                }
-            }
-        }
-    </script>
 
     <style>
         /* A3 Print Specifics */
@@ -96,6 +75,7 @@
             background-size: 8px 8px;
         }
     </style>
+    <link rel="stylesheet" href="tailwind.bundle.css">
 </head>
 <body class="bg-gray-200 min-h-screen flex flex-col items-center justify-center p-4 print:p-0">
 
