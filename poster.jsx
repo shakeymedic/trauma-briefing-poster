@@ -37,6 +37,8 @@ const Poster = () => {
                 
                 {/* HEADER */}
                 <header className="poster-header bg-dark-slate text-white p-8 flex justify-between items-end border-b-8 border-nhs-blue shrink-0 z-30 relative">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+                    <img src="https://raw.githubusercontent.com/shakeymedic/wmem/main/emevidence_logo.png" alt="EM Evidence logo" width="64" height="64" style={{ height: '64px', width: '64px', flexShrink: 0, objectFit: 'contain' }} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                     <div>
                         <h1 className="poster-title font-display text-7xl uppercase tracking-tighter leading-[0.9]">
                             Trauma <span className="text-nhs-blue">Brief</span>
@@ -44,6 +46,7 @@ const Poster = () => {
                         <p className="poster-subtitle text-xl font-bold text-slate-400 mt-2 tracking-wide uppercase">
                             Relational Coordination &bull; Zero Point Survey
                         </p>
+                    </div>
                     </div>
                     <div className="text-right hidden md:block">
                         <div className="text-sm font-bold text-slate-400">PURDY ET AL. (2020)</div>
