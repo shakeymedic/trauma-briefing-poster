@@ -76,6 +76,14 @@
         }
     </style>
     <link rel="stylesheet" href="tailwind.bundle.css">
+    <!-- Install as an app (PWA) -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#991b1b">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Trauma Brief">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body class="bg-gray-200 min-h-screen flex flex-col items-center justify-center p-4 print:p-0">
 
@@ -83,5 +91,6 @@
 
     <!-- poster.js is built from poster.jsx. After editing poster.jsx, run ./build.sh (see README.md). -->
     <script src="poster.js"></script>
+    <script src="sw-register.js"></script>
 </body>
 </html>
