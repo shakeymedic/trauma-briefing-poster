@@ -127,7 +127,7 @@ const Poster = () => {
                                         <div className="bg-blue-100 p-2 rounded-lg"><Icon name="activity" className="text-nhs-blue" size={32} /></div>
                                         <div className="leading-tight">
                                             <span className="text-xl font-bold text-slate-700 block">ATMIST Details</span>
-                                            <span className="text-sm text-slate-500 font-bold uppercase">Synthesize the Pre-Alert</span>
+                                            <span className="text-sm text-slate-500 font-bold uppercase">Synthesise the Pre-Alert</span>
                                         </div>
                                     </div>
                                 </div>
